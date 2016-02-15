@@ -35,7 +35,7 @@ public class InvariantTest {
 			String relPath = "data" + System.getProperty("file.separator");
 			if (!theoryFile.startsWith(relPath)) theoryFile = relPath + theoryFile;
 			*/
-			theoryFile = "data/tictactoe.kif";
+			theoryFile = "games/ticTacToe.kif";
 			// TODO: enable second param once optimization works
 			Theory theory = new Theory(debug, false);
 			

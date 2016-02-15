@@ -99,9 +99,9 @@ public class GameTester
         ArrayList<String> args = new ArrayList<String>();
 
         // Get the game's .kif file
-        System.out.print( "Game file (game-defs/*.kif): " );
+        System.out.print( "Game file (games/*.kif): " );
         String game = input.readLine();
-        args.add( "game-defs/" + game + ".kif" );
+        args.add( "games/" + game + ".kif" );
 
         System.out.print( "Role (default: 1st role): " );
         args.add( input.readLine() );

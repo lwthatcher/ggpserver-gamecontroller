@@ -86,6 +86,6 @@ public static void main(String[] args){
 Axioms a = new Axioms();
 String str = "((mark 3 2) noop )";
 ExpList e= Parser.parseExpList(str);
-
+System.out.println("ok");
 }
 }

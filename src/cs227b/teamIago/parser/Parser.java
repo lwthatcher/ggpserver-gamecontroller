@@ -26,8 +26,13 @@ import cs227b.teamIago.resolver.NotOp;
  */
 public class Parser {
 public static void main(String args[]){
-	//String filename = "data\\tictactoe.gdl";
-	//ExpList e = parse(filename);
+	String filename;
+    if (args.length == 0)
+        filename = "games/ticTacToe.kif";
+    else
+        filename = "games/" + args[0];
+	ExpList e = parseFile(filename);
+    System.out.println("ok");
 }
 
 public static ExpList parseFile(String filename){

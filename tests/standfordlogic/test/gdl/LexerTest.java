@@ -10,22 +10,23 @@
 /**
  * 
  */
-package stanfordlogic.test.gdl;
+package standfordlogic.test.gdl;
 
 import java.io.ByteArrayInputStream;
 
+import org.junit.Test;
 import stanfordlogic.gdl.Lexer;
 import stanfordlogic.gdl.SymbolTable;
 
-
-import junit.framework.TestCase;
+import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  *
  */
-public class LexerTest extends TestCase
+public class LexerTest
 {
-	
+	@Test
 	public void testLexer()
 	{
 		ByteArrayInputStream input = new ByteArrayInputStream( (new String("hello there")).getBytes() );
@@ -39,7 +40,8 @@ public class LexerTest extends TestCase
 		
 		assertEquals(2, symtab.size() );
 	}
-	
+
+	@Test
 	public void testLexer2()
 	{
 		ByteArrayInputStream input = new ByteArrayInputStream( (new String("(hello there)")).getBytes() );
@@ -60,7 +62,8 @@ public class LexerTest extends TestCase
 		assertEquals("hello", symtab.get(t1));
 		assertEquals("there", symtab.get(t2));
 	}
-	
+
+	@Test
 	public void testLexer3()
 	{
 		ByteArrayInputStream input = new ByteArrayInputStream( (new String("(hello% there)")).getBytes() );
@@ -79,7 +82,8 @@ public class LexerTest extends TestCase
             // ok, we got an exception.
 		}
 	}
-    
+
+	@Test
     public void testLexer4()
     {
         ByteArrayInputStream input = new ByteArrayInputStream( (new String(";; this is\n(hello there) ;; a\n;; comment\n")).getBytes() );

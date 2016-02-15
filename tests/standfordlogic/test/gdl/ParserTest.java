@@ -10,7 +10,7 @@
 /**
  * 
  */
-package stanfordlogic.test.gdl;
+package standfordlogic.test.gdl;
 
 import java.io.ByteArrayInputStream;
 
